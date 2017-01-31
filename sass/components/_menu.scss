@@ -1,0 +1,177 @@
+$duration: 0.5s;
+$menu-bkg: #fff;
+$menu-bkg-inner: #e9f6fa;
+$menu-hov: #01a3d4;
+$menu-height: 56;
+$menu-color-hov: #fff;
+$menu-color: $default-color;
+$menu-font-size: $base-font-size;
+$menu-border-bottom-size: 2;
+$menu-border-bottom-color: $menu-bkg-inner;
+
+@keyframes menu-open {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes menu-close {
+	0% {
+		transform: translateX(0%);
+		opacity: 1;
+		height: 100%;
+	}
+
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+		height: 0%;
+	}
+}
+
+
+
+@mixin nav {
+	display: table;
+	width: 100%;
+	@include breakpoint(tablet) {
+		position: relative;
+	}
+	@include breakpoint(mobile) {
+		transform: translateX(-100%) scaleY(0);
+		opacity: 0;
+		@at-root .mobile-open {
+			animation: menu-open $duration ease-in 1;
+			transform: translateX(0%);
+			opacity: 1;
+		}
+		@at-root .mobile-close {
+			animation: menu-close $duration ease-in 1;
+		}
+		@at-root .hide {
+			display: none!important;
+		}
+		@at-root .show {
+			display: block!important;
+		}
+	}
+
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		transition: background 0.3s;
+		@if $menu-border-bottom-size > 0 {
+			border-bottom: #{$menu-border-bottom-size}px solid #{$menu-border-bottom-color};
+		}
+		@include breakpoint(tablet) {
+			position: relative;
+		}
+		@include breakpoint(mobile){
+			display: list-item;
+		}
+		a {
+			height: #{$menu-height}px;
+			text-decoration: none;
+			display: table;
+			width: 100%;
+			height: #{$menu-height}px;
+			padding: 10px;
+			color: $default-color;
+			span {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				line-height: #{$menu-font-size + 2}px;
+			}
+		}
+		&:hover,
+		&--act {
+			a {
+				background: $menu-hov;
+				color: $menu-color-hov;
+			}
+		}
+		.dropdown {
+			@include breakpoint (tablet) {
+				transform: translateY(-50%) scaleY(0);
+			}
+			width: 200px;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			left: 0;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			transition: transform 0.3s ease-in;
+			@include breakpoint(mobile){
+				width: auto;
+				position: static;
+				display: block; /// depricated
+			}
+			&__item {
+				position: relative;
+				text-align: center;
+				transition: background 0.3s;
+				border-top: 1px solid #fff;
+				a {
+					background: $menu-bkg-inner;
+					text-decoration: none;
+					display: table;
+					width: 100%;
+					height: 100%;
+					color: $default-color;
+					span {
+						padding: 0 10px;
+						display: table-cell;
+						vertical-align: middle;
+						text-align: left;
+						@include breakpoint(mobile) {
+							text-align: center;
+						}
+					}
+				}
+				&:hover {
+					a {
+						background: $menu-hov;
+						color: $menu-color-hov;
+					}
+				}
+			}
+		}
+
+		@include breakpoint (tablet) {
+			&:hover {
+				.dropdown {
+					transform: translateY(0%) scaleY(1);
+					opacity: 1;
+					z-index: 100;
+				}
+			}
+		}
+
+		@include breakpoint (mobile) {
+			.dropdown{
+				&.show {
+					transform: translateY(0%) scaleY(1);
+					opacity: 1;
+					z-index: 100;
+				}
+				&.hide {
+
+				}
+			}
+
+		}
+	}
+
+}
+
+.site-nav {
+	@include nav;
+}
