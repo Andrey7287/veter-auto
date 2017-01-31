@@ -74,7 +74,7 @@ module.exports = {
 				ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!resolve-url-loader?sourceMap!sass-loader?sourceMap')
 			},
 			{
-				test: /\.(gif|jpg|jpeg\ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+				test: /\.(gif|jpg|png|jpeg\ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
 				loader: "file-loader?name=[name].[ext]&publicPath=images/&outputPath=./images/"
 			}
 		]

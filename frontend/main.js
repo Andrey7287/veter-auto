@@ -12,6 +12,7 @@ import Footer from './modules/footer';
 import OnResize from './modules/resize';
 import scrollup from './modules/scrollup';
 import 'script!picturefill/dist/picturefill.min';
+import 'script!./modules/jquery-ui-1.9.2.custom.min';
 
 /* Define project components and variables */
 var menu = new Menu(),
