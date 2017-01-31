@@ -59,6 +59,10 @@
 		display: inline-block;
 		margin: 0 3px;
 		button {
+			padding: 0;
+			border: 0;
+			text-indent: -9999px;
+			background-color: transparent;
 			@include sprite($dot);
 		}
 		&.slick-active {
