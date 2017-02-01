@@ -1,0 +1,26 @@
+header {
+position: relative;
+	z-index: 3;
+}
+.site-top {
+	display: table;
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+		&:nth-child(2){
+			padding-left: 135px;
+		}
+	}
+	.contacts {
+		display: table;
+		&__item {
+			display: table-cell;
+		}
+	}
+}
+
+#siteMenu {
+	background: linear-gradient(to bottom, rgba(16,122,196,1) 0%,rgba(13,98,175,1) 100%);
+	border-bottom: 1px solid #0a4e8c;
+	box-shadow: 0 5px 10px -5px rgba(0,0,0,.75);
+}

@@ -1,0 +1,27 @@
+.search-auto {
+	background: #fff;
+	border-radius: 5px;
+	display: table;
+	width: 100%;
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__label {
+		@include sprite($corner);
+		display: table-cell;
+		vertical-align: middle;
+		.txt {
+			@include font(22,26);
+			color: $blue;
+			text-transform: uppercase;
+			padding-left: 20px;
+			span {
+				color: #000;
+				font-weight: 700;
+			}
+		}
+	}
+}
+

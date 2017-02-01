@@ -1,0 +1,16 @@
+.block-bkg {
+	max-width: 1600px;
+	margin: 0 auto;
+	&--top {
+		background: url(../images/bkg_main_top.jpg) 50% 0 no-repeat;
+		position: relative;
+		z-index: 1;
+		h1 {
+			color: #fff;
+			text-align: center;
+		}
+	}
+	&--bottom {
+		background: url(../images/bkg_main_bottom.jpg) 50% 0 no-repeat;
+	}
+}

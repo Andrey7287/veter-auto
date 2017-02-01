@@ -41,7 +41,7 @@ module.exports = {
 			},{
 				test: /\.scss$/,
 				loader: NODE_ENV == 'development' ?
-				'style!css!resolve-url!sass' :
+				'style!css!sass' :
 				ExtractTextPlugin.extract('style', 'css?sourceMap!resolve-url?sourceMap!sass?sourceMap')
 			},
 			{
@@ -56,7 +56,8 @@ module.exports = {
 			NODE_ENV: JSON.stringify(NODE_ENV)
 		}),
 		new webpack.ProvidePlugin({
-			$: 'jquery/dist/jquery.min'
+			$: 'jquery/dist/jquery.min',
+			jQuery: 'jquery/dist/jquery.min'
 		}),
 		new SpritesmithPlugin({
 			src: {

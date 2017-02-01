@@ -1,13 +1,12 @@
 $duration: 0.5s;
-$menu-bkg: #fff;
 $menu-bkg-inner: #e9f6fa;
 $menu-hov: #01a3d4;
 $menu-height: 56;
 $menu-color-hov: #fff;
-$menu-color: $default-color;
-$menu-font-size: $base-font-size;
-$menu-border-bottom-size: 2;
-$menu-border-bottom-color: $menu-bkg-inner;
+$menu-color: #fff;
+$menu-font-size: 14;
+$menu-border-bottom-size: 0;
+$menu-border-bottom-color: #0a4e8c;
 
 @keyframes menu-open {
 	0% {
@@ -75,14 +74,15 @@ $menu-border-bottom-color: $menu-bkg-inner;
 			display: list-item;
 		}
 		a {
-			height: #{$menu-height}px;
 			text-decoration: none;
 			display: table;
 			width: 100%;
 			height: #{$menu-height}px;
 			padding: 10px;
-			color: $default-color;
+			color: $menu-color;
 			span {
+				font-size: #{$menu-font-size}px;
+				font-weight: 700;
 				text-align: center;
 				display: table-cell;
 				vertical-align: middle;
@@ -92,8 +92,9 @@ $menu-border-bottom-color: $menu-bkg-inner;
 		&:hover,
 		&--act {
 			a {
-				background: $menu-hov;
-				color: $menu-color-hov;
+				/*background: $menu-hov;
+				color: $menu-color-hov;*/
+				text-decoration: underline;
 			}
 		}
 		.dropdown {
@@ -174,4 +175,22 @@ $menu-border-bottom-color: $menu-bkg-inner;
 
 .site-nav {
 	@include nav;
+	&__item {
+		&:first-child {
+			.site-nav__link {
+				padding-left: 0;
+				span {
+					text-align: left;
+				}
+			}
+		}
+		&:last-child {
+			.site-nav__link {
+				padding-right: 0;
+				span {
+					text-align: right;
+				}
+			}
+		}
+	}
 }

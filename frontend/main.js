@@ -6,7 +6,7 @@ window.$ = $;
 window.jQuery = $;
 
 /* Import project styles and components */
-import 'jquery-ui-bundle';
+import './modules/jquery-ui-1.9.2.custom.min';
 import '../sass/css.scss';
 import Menu from './modules/menu';
 import Footer from './modules/footer';
@@ -103,18 +103,8 @@ $(document).scroll(function(){
 $('.scrollup').scrollUp();
 
 /*******************************
-***** Align blocks on main *****
+*********** jQueryUI ***********
 ********************************/
 
-function alignMainGreed(){
-
-	var baseHeight = $('.general').outerHeight(true),
-			feedLinkHeight = $('.news-feed__link').outerHeight(true),
-			feedItemHeight = ( baseHeight - feedLinkHeight - 45 ) / 3;
-
-	$('.news-feed__item').height(feedItemHeight);
-
-}
-
-resizeAlignGreed.bind(alignMainGreed);
+$(".datepicker").datepicker();
 
