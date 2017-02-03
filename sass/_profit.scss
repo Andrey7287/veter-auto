@@ -1,0 +1,75 @@
+.profit {
+	padding: 40px 0 120px;
+	background: #f1f1f1;
+	.h1 {
+		margin-bottom: 55px;
+	}
+	&__first,
+	&__item {
+		height: 470px;
+	}
+	&__first {
+		background: url(../images/profit_01.jpg) 0 0 no-repeat;
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+		.num {
+			@include font(48,52,700);
+		}
+		.title {
+			@include font(36,38,700);
+			padding-bottom: 10px;
+		}
+		.txt {
+			@include font(14,22);
+			padding: 10px 110px;
+		}
+	}
+	&__item {
+		width: calc(33.333% - 16px);
+		float: left;
+		background: #fff;
+		margin-left: 8px;
+		overflow: hidden;
+		border-radius: 5px;
+		&:first-child {
+			margin-left: 0;
+		}
+		.profit__txt {
+			padding: 25px 15px 25px 25px;
+			.num,
+			.title {
+				color: $orange;
+				@include font(18,24,700);
+			}
+			.title {
+				color: #000;
+				margin-bottom: 15px;
+			}
+			.txt {
+				color: $grey;
+				@include font(14,22);
+			}
+		}
+		&:last-child {
+			.profit__txt {
+				.num {
+					@include font(14,17,700);
+					float: left
+				}
+				.title {
+					@include font(14,17,700);
+					padding-left: 25px;
+					margin-bottom: 20px;
+				}
+				.txt {
+					@include font(18,22,700);
+					color: $blue;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

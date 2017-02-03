@@ -1,22 +1,133 @@
 .footer {
 	background: $bkg-footer;
-	padding: 25px 0;
-	.soc {
-		line-height: 30px;
-		@include breakpoint (mobile) {
-			margin: 10px 0 20px;
+	padding: 55px 0 17px;
+}
+
+.footer-nav {
+	.title {
+		@include font(16,24,700);
+		color: #000;
+		margin-bottom: 10px;
+	}
+	span,
+	a,
+	.sub-title {
+		@include font(13,24);
+		span {
+			@include font(13,24,$context: 13);
 		}
+	}
+	.sub-title {
+		font-weight: 700;
+	}
+	a {
+		display: block;
+		color: #3d4646;
+		&:hover {
+			color: #000;
+		}
+	}
+	.icon--print {
+		display: block;
+		color: $orange;
+		line-height: 17px;
+		padding-left: 30px;
+		position: relative;
+		margin: 17px 0;
+		font-weight: 700;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: calc(50% - 9px);
+			left: 0;
+			@include sprite($icon_forprint);
+		}
+		&:hover {
+			color: darken($orange, 7%);
+		}
+	}
+}
+.footer-panel {
+	padding: 17px 0;
+	border-top: #e0e0e0;
+	&__item {
+		float:right;
+		&:last-child {
+			float: left;
+		}
+	}
+
+	.soc {
+
 		&__item {
 			font-size: 0;
-			line-height: 0;
-			vertical-align: middle;
-			position: relative;
+
 			&::before {
-				content: ".";
-				width: 42px;
-				height: 36px;
+				content: "";
 				display: inline-block;
+				transition: 0.3s ease-out;
+			}
+
+			&--ok {
+				&::before {
+					@include sprite($soc_ok);
+				}
+			}
+			&--fb {
+				&::before {
+					@include sprite($soc_fb);
+				}
+			}
+			&--vk {
+				&::before {
+					@include sprite($soc_vk);
+				}
+			}
+			&--in {
+				&::before {
+					@include sprite($soc_in);
+				}
+			}
+			&--yt {
+				&::before {
+					@include sprite($soc_yt);
+				}
+			}
+			&:hover {
+				&::before {
+					border-radius: 50%;
+				}
 			}
 		}
+
+	}
+
+	.search {
+		position: relative;
+		margin: 0 20px;
+		input {
+			@include font(16, 24);
+			padding: 4px 20px 4px 10px;
+			width: 185px;
+			color: #3d4646;
+		}
+		label {
+			text-indent: -9999px;
+			display: inline-block;
+			@include sprite($icon_search);
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+		}
+	}
+
+	.btn {
+		margin-left: 5px;
+	}
+
+	.copyright {
+		@include font (13,22);
 	}
 }

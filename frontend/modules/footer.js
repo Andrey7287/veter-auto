@@ -4,8 +4,8 @@ export default class {
 
 		this.cms = cms;
 		this.content = $(content);
-		this.headerHeight = $('header').outerHeight(true);
-		this.footerHeight = $('footer').outerHeight(true);
+		this.headerHeight;
+		this.footerHeight;
 		this.vh = $(window).outerHeight(true);
 		this.siteHeight;
 		this.adminHeight;
@@ -33,6 +33,11 @@ export default class {
 
 	setParam() {
 
+
+		this.headerHeight = $('header').outerHeight(true);
+		this.footerHeight = $('footer').outerHeight(true);
+
+//console.log(this.footerHeight);
 		this.adminHeight = this._getAdminHeight();
 		this.siteHeight = this.headerHeight +
 											this.footerHeight +
@@ -47,9 +52,9 @@ export default class {
 		if ( this.vh > this.siteHeight ) {
 
 			var newHeight = this.vh - ( this.headerHeight + this.footerHeight + this.adminHeight );
-			this.content.height(newHeight);
+			this.content.outerHeight(newHeight);
 
-		} else { this.content.height('auto'); }
+		} else { this.content.outerHeight('auto'); }
 
 	}
 

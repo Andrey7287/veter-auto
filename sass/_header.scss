@@ -4,23 +4,74 @@ position: relative;
 }
 .site-top {
 	display: table;
+	width: 100%;
 	&__item {
 		display: table-cell;
 		vertical-align: middle;
-		&:nth-child(2){
-			padding-left: 135px;
+		&:nth-child(even){
+			padding-left: 10%;
+		}
+		&:last-child{
+			text-align: right;
 		}
 	}
 	.contacts {
 		display: table;
+		width: 100%;;
+		@include font(13, 13);
 		&__item {
 			display: table-cell;
+			padding: 0 30px 0 50px;
+			position: relative;
+			vertical-align: middle;
+			&::before {
+				position: absolute;
+				content: "";
+				left: 18px;
+				top: 0;
+				@include sprite($icon_phone);
+			}
+			&:first-child {
+				border-right: 1px solid #bebebe;
+				&::before {
+					left: 24px;
+					@include sprite($icon_location);
+				}
+			}
+		}
+		span {
+			&.metro,
+			&.shedule {
+				margin-top: 5px;
+			}
+			&.title {
+				font-weight: 700;
+			}
+			&.shedule {
+				display: block;
+			}
+		}
+		.phone {
+			@include font (18,18,700);
+			@include clearfix;
+			&__item {
+				color: #3d4646;
+				&:first-child {
+					float: left;
+				}
+				&:last-child {
+					float: right;
+				}
+			}
 		}
 	}
 }
 
 #siteMenu {
 	background: linear-gradient(to bottom, rgba(16,122,196,1) 0%,rgba(13,98,175,1) 100%);
-	border-bottom: 1px solid #0a4e8c;
+	border-bottom: 3px solid #0a4e8c;
 	box-shadow: 0 5px 10px -5px rgba(0,0,0,.75);
+	.site-menu-inner {
+		margin: 0 -30px;
+	}
 }

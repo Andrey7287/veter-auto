@@ -1,0 +1,14 @@
+.breadcrumbs {
+	margin: 20px 0;
+	&__item {
+		@include font(13, 20);
+	}
+	a{
+		&::after{
+			content: "";
+			display: inline-block;
+			@include sprite($icon_arrow);
+			margin: 0 5px 0 8px;
+		}
+	}
+}

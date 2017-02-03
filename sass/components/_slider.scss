@@ -1,24 +1,18 @@
 
-.slider-wrapper {
+.slider-main-wrapper {
 	position: relative;
-	max-width: 1200px;
-	margin: 0 auto;
+	margin-right: -30px;
+	margin-bottom: 70px;
 }
 /**** SLIDER ****/
-.slider {
+.slider-main {
 	&__item {
-		position: relative;
-	}
-	&__inner {
-		position: absolute;
-		top: 1em;
-		bottom: 1em;
-		left: 1em;
-		right: 1em;
-
-	}
-	&__head {
-
+		margin-right: 30px;
+		padding: 70px 40px;
+		img {
+			margin: 0 20px 10px 0;
+			float: left;
+		}
 	}
 }
 /**** ARROWS ****/
@@ -34,18 +28,24 @@
 		cursor: pointer;
 	}
 	&.left {
-		left: 13px;
+		left: -34px;
 		@include sprite($arrow_left);
+		&:hover {
+			@include sprite($arrow_left_hov);
+		}
 	}
 	&.right {
-		right: 13px;
+		right: -4px;
 		@include sprite($arrow_right);
+		&:hover {
+			@include sprite($arrow_right_hov);
+		}
 	}
 }
 /**** DOTS ****/
 .slider-dots {
 	position: absolute;
-	bottom: 15px;
+	bottom: -20px;
 	left: 0;
 	right: 0;
 	text-align: center;
@@ -55,6 +55,7 @@
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+
 	li {
 		display: inline-block;
 		margin: 0 3px;
@@ -79,4 +80,20 @@
 
 }
 
-
+.review {
+	color: $grey;
+	&__name {
+		@include font(18,24,700);
+		color: #000;
+	}
+	&__date {
+		@include font(14,24);
+	}
+	&__txt {
+		@include font(14,24);
+		div {
+			font-weight: 700;
+			margin-top: 10px;
+		}
+	}
+}

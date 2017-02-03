@@ -1,0 +1,95 @@
+.catalog {
+	.header {
+		display: table;
+		width: 100%;
+		margin: 40px 0;
+		&__item {
+			display: table-cell;
+			vertical-align: middle;
+			&.h1 {
+				width: 320px;
+			}
+		}
+		.vendor-list {
+			li {
+				display: inline-block;
+				float: right;
+				margin-left: 1%;
+			}
+		}
+	}
+	&__item {
+		border-radius: 5px;
+		border: 1px solid #dfdfdf;
+		position: relative;
+		padding-bottom: 16px;
+		margin-bottom: 25px;
+	}
+	&__photo {
+		position: relative;
+		padding-bottom: 205px;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			//transition: transform .4s ease-out;
+		}
+	}
+	&__descr {
+		padding: 20px;
+	}
+	.spec {
+		@include clearfix;
+		&__item {
+			color: $grey;
+			@include font(14,24);
+			width: 50%;
+			float: left;
+		}
+	}
+	.price {
+		display: table;
+		width: 100%;
+		margin: 20px 0;
+		&__item {
+			display: table-cell;
+			&:last-child {
+				text-align: right;
+			}
+			span {
+				color: $orange;
+				@include font(20,22,700);
+			}
+		}
+	}
+
+	.reviews {
+		color: $blue;
+		position: absolute;
+		padding-left: 23px;
+		@include font(13,16,700);
+		bottom:20px;
+		left:20px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include sprite($icon_reviews);
+		}
+	}
+
+	&__button {
+		text-align: center;
+		margin: 30px 0 55px;
+		button {
+			width: 335px!important;
+		}
+	}
+}

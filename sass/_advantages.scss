@@ -1,0 +1,44 @@
+.advantages {
+	&__item {
+		margin: 30px 0;
+		width: 50%;
+		float: left;
+		&:nth-child(odd){
+			padding: 0 115px 0 35px;
+			clear: both;
+		}
+		&:last-child {
+			padding: 27px 10px 30px 0;
+			background: $orange;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 30px;
+				height: 100%;
+				background: $orange;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				top: 0;
+				bottom: 0;
+				left: -30px;
+			}
+			.title {
+				color: #fff;
+				@include font(36,40,700);
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.title {
+		@include font(26,32,700);
+		color: $orange;
+	}
+	p{
+		@include font(14,22);
+	}
+}

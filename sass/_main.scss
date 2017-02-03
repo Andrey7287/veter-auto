@@ -8,9 +8,49 @@
 		h1 {
 			color: #fff;
 			text-align: center;
+			margin: 125px 0 50px;
 		}
 	}
 	&--bottom {
 		background: url(../images/bkg_main_bottom.jpg) 50% 0 no-repeat;
+		color: #fff;
+		padding: 28px 0;
+		margin-bottom: 40px;
+		.h1 {
+			color: #fff;
+			padding-left: 32px;
+		}
+	}
+}
+
+.present-top {
+	display: table;
+	width: 100%;
+	&__item {
+		display: table-cell;
+		width: 34%;
+		vertical-align: middle;
+		color: #fff;
+		@include font(20,24);
+		padding-top: 52px;
+		padding-bottom: 82px;
+		&:last-child {
+			width: 32%;
+			.present-top__inner {
+				float: right;
+			}
+		}
+	}
+	&__inner {
+		display: table;
+		img {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		span {
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 10px;
+		}
 	}
 }

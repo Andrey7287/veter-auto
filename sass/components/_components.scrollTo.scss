@@ -1,4 +1,5 @@
-$scroll-up-color: #A8B7BE;
+$scroll-up-color: $orange;
+$scroll-up-bkg: #fff;
 .scrollup {
 	position: fixed;
 	text-indent: -9999px;
@@ -7,6 +8,7 @@ $scroll-up-color: #A8B7BE;
 	bottom: 60px;
 	width: 36px;
 	height: 36px;
+	background-color: $scroll-up-bkg;
 	border: 2px solid $scroll-up-color;
 	border-radius: 50%;
 	cursor: pointer;

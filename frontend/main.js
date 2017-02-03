@@ -7,6 +7,8 @@ window.jQuery = $;
 
 /* Import project styles and components */
 import './modules/jquery-ui-1.9.2.custom.min';
+import './modules/datepicker-ru';
+import './modules/ravno';
 import '../sass/css.scss';
 import Menu from './modules/menu';
 import Footer from './modules/footer';
@@ -48,7 +50,6 @@ $(window).on('load', function(){
 	footer.fixFooter();
 });
 
-
 /**********************
 ********* MAP *********
 ***********************/
@@ -70,11 +71,15 @@ if ( isSlider ) {
 
 	require.ensure([], (require) => {
 		require('script!slick-carousel/slick/slick.js');
-		$('.slider').slick({
+		$('.slider-main').slick({
 			prevArrow: $('.left'),
 			nextArrow: $('.right'),
 			dots: true,
-			appendDots: $('.slider-dots')
+			appendDots: $('.slider-dots'),
+			slidesToShow: 2
+		});
+		$('.slider-card').slick({
+			arrows: false
 		});
 	});
 
@@ -106,5 +111,18 @@ $('.scrollup').scrollUp();
 *********** jQueryUI ***********
 ********************************/
 
-$(".datepicker").datepicker();
+$.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+$(".datepicker").datepicker( $.datepicker.regional[ "ru" ] );
 
+$(".datepicker").datepicker({
+	dateFormat: "dd.mm.yy"
+});
+
+
+/*******************************
+********* Align cardsI *********
+********************************/
+
+var $card = $('.catalog__descr');
+$card.find('h3').ravno();
+$card.find('.spec').ravno();

@@ -23,13 +23,15 @@
 						<div class="contacts">
 							<div class="contacts__item">
 								<span class="title">Адрес офиса:</span>
-								Москва, Матросская Тишина, 23 с. 1
-								<span class="dot">м. Сокольники</span>
+								<span>Москва, Матросская Тишина, 23 с. 1</span>
+								<span class="metro">м. Сокольники</span>
 							</div>
 							<div class="contacts__item">
-								<a href="tel:84955062604" class="phone">8 (495) 506-26-04</a>
-								<a href="tel:89265392517" class="phone">8 (926) 539-25-17</a>
-								Мы работаем без выходных, с 10:00 до 20:0
+								<div class="phone">
+									<a href="tel:84955062604" class="phone__item">8 (495) 506-26-04</a>
+									<a href="tel:89265392517" class="phone__item">8 (926) 539-25-17</a>
+								</div>
+								<span class="shedule">Мы работаем без выходных, с 10:00 до 20:0</span>
 							</div>
 						</div>
 					</div>
@@ -43,22 +45,24 @@
 			<nav id="siteMenu">
 
 				<div class="container">
-					<button class="c-hamburger c-hamburger--htx">
-						<span>toggle menu</span>
-					</button>
+					<div class="site-menu-inner">
+						<button class="c-hamburger c-hamburger--htx">
+							<span>toggle menu</span>
+						</button>
 
-					<ul class="site-nav mobile-close hide">
-						<li class="site-nav__item site-nav__item--act"><a href="" class="site-nav__link"><span>О&nbsp;компании</span></a></li>
-						<li class="site-nav__item"><a href="#tech" class="site-nav__link"><span>Новости</span></a></li>
-						<li class="site-nav__item"><a href="#iss" class="site-nav__link"><span>Акции</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Парк машин</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Тарифы</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Информация</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Услуги</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Корпоративным клиентам</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Отзывы</span></a></li>
-						<li class="site-nav__item"><a href="" class="site-nav__link"><span>Контакты</span></a></li>
-					</ul>
+						<ul class="site-nav mobile-close hide">
+							<li class="site-nav__item site-nav__item--act"><a href="" class="site-nav__link"><span>О&nbsp;компании</span></a></li>
+							<li class="site-nav__item"><a href="#tech" class="site-nav__link"><span>Новости</span></a></li>
+							<li class="site-nav__item"><a href="#iss" class="site-nav__link"><span>Акции</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Парк машин</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Тарифы</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Информация</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Услуги</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Корпоративным клиентам</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Отзывы</span></a></li>
+							<li class="site-nav__item"><a href="" class="site-nav__link"><span>Контакты</span></a></li>
+						</ul>
+					</div>
 				</div>
 
 			</nav>
@@ -67,62 +71,63 @@
 		<div class="content">
 			<!-- HEADER end-->
 
-			<!--breadcrumbs
-			<div class="breadcrumbs" hidden>
-					<a class="breadcrumbs__item" href="#">Главная</a>
-					—
-					<a class="breadcrumbs__item" href="#">Каталог</a>
-					—
-					<a class="breadcrumbs__item" href="#">Цемент, строительные смеси</a>
-					—
-					<span class="breadcrumbs__item" >Сухая цементно-песочная смесь</span>
-			</div>-->
-
 
 			<div class="block-bkg block-bkg--top">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<h1>Аренда и прокат легковых автомобилей в Москве</h1>
-							<div class="search-auto">
-								<form action="">
+							<form action="">
+								<div class="search-auto">
 									<div class="search-auto__item">
 										<div class="search-auto__label">
 											<div class="txt"><span>Найти авто</span><br />за 60 секунд</div>
 										</div>
 									</div>
 									<div class="search-auto__item">
-										<select name="" id="">
-											<option disablef>Автомобиль</option>
-											<option value="">econom</option>
-											<option value="">standart</option>
-											<option value="">premium</option>
-										</select>
+										<div class="search-auto__select">
+											<select name="" id="">
+												<option>Автомобиль</option>
+												<option value="">econom</option>
+												<option value="">standart</option>
+												<option value="">premium</option>
+											</select>
+										</div>
 									</div>
 									<div class="search-auto__item">
-										<label for="fromdate">Выдача</label>
-										<input name="from" type="text" class="datepicker" id="fromdate" />
+										<div class="search-auto__date">
+											<label for="fromdate">Выдача</label>
+											<input name="from" type="text" class="datepicker" id="fromdate" />
+										</div>
 									</div>
 									<div class="search-auto__item">
-										<label for="fromdate">Возврат</label>
-										<input name="to" type="text" class="datepicker"  id="todate" />
+										<div class="search-auto__date">
+											<label for="fromdate">Возврат</label>
+											<input name="to" type="text" class="datepicker"  id="todate" />
+										</div>
 									</div>
 									<div class="search-auto__item">
-										<button>Найти</button>
+										<button class="search-auto__button">Найти</button>
 									</div>
-								</form>
-							</div>
+								</div>
+							</form>
 							<div class="present-top">
 								<div class="present-top__item">
-									<img src="images/present_top_01.png" alt="">
-									<span>Нас выбрали<br />3456 человек</span></div>
+									<div class="present-top__inner">
+										<img src="images/present_top_01.png" alt="">
+										<span>Нас выбрали<br />3456 человек</span></div>
+									</div>
 								<div class="present-top__item">
-									<img src="images/present_top_02.png" alt="">
-									<span>Любые сроки<br />аренды</span>
+									<div class="present-top__inner">
+										<img src="images/present_top_02.png" alt="">
+										<span>Любые сроки<br />аренды</span>
+									</div>
 								</div>
 								<div class="present-top__item">
-									<img src="images/present_top_03.png" alt="">
-									<span>Минимальный<br />набор документов</span>
+									<div class="present-top__inner">
+										<img src="images/present_top_03.png" alt="">
+										<span>Минимальный<br />набор документов</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -130,6 +135,7 @@
 				</div>
 			</div>
 
+			<!-- BANNER START -->
 			<div class="container">
 				<div class="main-banner">
 					<div class="main-banner__txt">
@@ -140,26 +146,32 @@
 						Уточняйте у менеджеров условия акции.</p>
 					</div>
 					<img src="images/banner_main.jpg" alt="" />
-					<button>узнать подробнее</button>
+					<div class="main-banner__button">
+						<button>узнать подробнее</button>
+					</div>
 				</div>
 			</div>
+			<!-- BANNER END -->
 
+			<!-- CATALOG ON MAIN -->
 			<div class="container">
 				<div class="catalog">
-					<div class="h1">Наш автопарк</div>
-					<div class="catalog__vendors">
-						<ul class="vendor-list">
-							<li><a href=""><img src="images/vendors_kia.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_toyota.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_infiniti.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_renault.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_shkoda.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_shevorolet.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_mitsubishi.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_hendai.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_ford.png" alt=""></a></li>
-							<li><a href=""><img src="images/vendors_nissan.png" alt=""></a></li>
-						</ul>
+					<div class="header">
+						<div class="h1 header__item">Наш автопарк</div>
+						<div class="header__item">
+							<ul class="vendor-list">
+								<li><a href=""><img src="images/vendors_kia.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_toyota.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_infiniti.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_renault.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_shkoda.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_shevorolet.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_mitsubishi.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_hendai.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_ford.png" alt=""></a></li>
+								<li><a href=""><img src="images/vendors_nissan.png" alt=""></a></li>
+							</ul>
+						</div>
 					</div>
 
 					<div class="row">
@@ -176,10 +188,14 @@
 										<div class="spec__item">Седан</div>
 									</div>
 									<div class="price">
-										<span>от 1600 р./сут.</span>
-										<a href="" class="btn">Подробнее</a>
+										<div class="price__item">
+											<span>от 1600 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
 									</div>
-									<div class="reviews">2 отзывов</div>
+									<a href="#" class="reviews">2 отзывов</a>
 								</div>
 							</div>
 						</div>
@@ -196,10 +212,14 @@
 										<div class="spec__item">Седан</div>
 									</div>
 									<div class="price">
-										<span>от 1100 р./сут.</span>
-										<a href="" class="btn">Подробнее</a>
+										<div class="price__item">
+											<span>от 1100 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
 									</div>
-									<div class="reviews">2 отзывов</div>
+									<a href="#" class="reviews">2 отзывов</a>
 								</div>
 							</div>
 						</div>
@@ -216,10 +236,14 @@
 										<div class="spec__item">Седан</div>
 									</div>
 									<div class="price">
-										<span>от 1600 р./сут.</span>
-										<a href="" class="btn">Подробнее</a>
+										<div class="price__item">
+											<span>от 1600 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
 									</div>
-									<div class="reviews">11 отзывов</div>
+									<a href="#" class="reviews">11 отзывов</a>
 								</div>
 							</div>
 						</div>
@@ -236,30 +260,129 @@
 										<div class="spec__item">Седан</div>
 									</div>
 									<div class="price">
-										<span>от 1100 р./сут.</span>
-										<a href="" class="btn">Подробнее</a>
+										<div class="price__item">
+											<span>от 1100 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
 									</div>
-									<div class="reviews">0 отзывов</div>
+									<a href="#" class="reviews">0 отзывов</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="catalog__item">
+								<div class="catalog__photo"><img src="images/catalog_01.jpg" alt=""></div>
+								<div class="catalog__descr">
+									<h3>Hyundai i30</h3>
+									<div class="spec">
+										<div class="spec__item">2007 г.</div>
+										<div class="spec__item">АКПП</div>
+										<div class="spec__item">Бензин</div>
+										<div class="spec__item">Кондиционер</div>
+										<div class="spec__item">Седан</div>
+									</div>
+									<div class="price">
+										<div class="price__item">
+											<span>от 1600 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+									</div>
+									<a href="#" class="reviews">2 отзывов</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="catalog__item">
+								<div class="catalog__photo"><img src="images/catalog_02.jpg" alt=""></div>
+								<div class="catalog__descr">
+									<h3>Nissan Almera Classic</h3>
+									<div class="spec">
+										<div class="spec__item">2007 г.</div>
+										<div class="spec__item">АКПП</div>
+										<div class="spec__item">Бензин</div>
+										<div class="spec__item">Кондиционер</div>
+										<div class="spec__item">Седан</div>
+									</div>
+									<div class="price">
+										<div class="price__item">
+											<span>от 1100 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+									</div>
+									<a href="#" class="reviews">2 отзывов</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="catalog__item">
+								<div class="catalog__photo"><img src="images/catalog_03.jpg" alt=""></div>
+								<div class="catalog__descr">
+									<h3>Ford Focus 3</h3>
+									<div class="spec">
+										<div class="spec__item">2007 г.</div>
+										<div class="spec__item">АКПП</div>
+										<div class="spec__item">Бензин</div>
+										<div class="spec__item">Кондиционер</div>
+										<div class="spec__item">Седан</div>
+									</div>
+									<div class="price">
+										<div class="price__item">
+											<span>от 1600 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+									</div>
+									<a href="#" class="reviews">11 отзывов</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="catalog__item">
+								<div class="catalog__photo"><img src="images/catalog_04.jpg" alt=""></div>
+								<div class="catalog__descr">
+									<h3>Mitsubishi Lancer 9</h3>
+									<div class="spec">
+										<div class="spec__item">2007 г.</div>
+										<div class="spec__item">АКПП</div>
+										<div class="spec__item">Бензин</div>
+										<div class="spec__item">Кондиционер</div>
+										<div class="spec__item">Седан</div>
+									</div>
+									<div class="price">
+										<div class="price__item">
+											<span>от 1100 р./сут.</span>
+										</div>
+										<div class="price__item">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+									</div>
+									<a href="#" class="reviews">0 отзывов</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="seeall">
+					<div class="catalog__button">
 						<button>Смотреть все автомобили</button>
 					</div>
 
 				</div>
 			</div>
+			<!-- CATALOG ON MAIN END -->
 
 			<div class="profit">
 				<div class="container">
+					<div class="h1">Почему выгодно брать машину в прокат?</div>
 					<div class="row">
 						<div class="col-sm-5">
-							<div class="profit__item">
-								<div class="profit__img">
-									<img src="images/profit_01.jpg" alt="">
-								</div>
+							<div class="profit__first">
 								<div class="profit__txt">
 									<div class="num">1</div>
 									<div class="title">Оформление договора всего за 20 минут!</div>
@@ -336,7 +459,7 @@
 								</div>
 								<div class="advantages__item">
 									<div class="title">Доставим авто<br />в любую точку города</div>
-									<a href="#" class="btn">Выбрать автомобиль</a>
+									<a href="#" class="btn btn--hovered">Выбрать автомобиль</a>
 								</div>
 							</div>
 						</div>
@@ -344,24 +467,35 @@
 				</div>
 			</div>
 
+			<!-- BLOCK WITH SLIDER -->
 			<div class="container">
-				<div class="slider-wrapper">
-					<div class="slider">
-						<div class="slider__item">
+				<div class="h1">333 отзывов от наших клиентов</div>
+				<div class="slider-main-wrapper">
+					<div class="slider slider-main">
+						<div class="slider-main__item">
 							<img src="images/review_tmp.jpg" alt="">
 							<div class="review">
-								<div class="review__name">Светлана и Дмитрий Новиковы,</div>
-								<div class="review__date">04.12.2015 в 13:30</div>
-								<div class="review__txt"><span>Мы остались очень довольны.</span> Все в лучшем виде.
+								<span class="review__name">Светлана и Дмитрий Новиковы,</span>
+								<span class="review__date">04.12.2015 в 13:30</span>
+								<div class="review__txt"><div>Мы остались очень довольны. Все в лучшем виде.</div>
 								Наша семейная не ставила цель найти себе дорогущую машина всего на викенд, который мы провели в Москве. Поэтому выбор пал на Ветер авто. Нам вполне на пару дней хотела 10-го Лансера, чтобы чувствовать себя по безразмерным московским дорогам на коне. Машинка идеальная и нам вышла очень недорого. Спасибо. Так держать уровень.</div>
 							</div>
 						</div>
-						<div class="slider__item">
+						<div class="slider-main__item">
 							<img src="images/review_tmp.jpg" alt="">
 							<div class="review">
-								<div class="review__name">Светлана и Дмитрий Новиковы,</div>
-								<div class="review__date">04.12.2015 в 13:30</div>
-								<div class="review__txt"><span>Мы остались очень довольны.</span> Все в лучшем виде.
+								<span class="review__name">Светлана и Дмитрий Новиковы,</span>
+								<span class="review__date">04.12.2015 в 13:30</span>
+								<div class="review__txt"><div>Мы остались очень довольны. Все в лучшем виде.</div>
+								Наша семейная не ставила цель найти себе дорогущую машина всего на викенд, который мы провели в Москве. Поэтому выбор пал на Ветер авто. Нам вполне на пару дней хотела 10-го Лансера, чтобы чувствовать себя по безразмерным московским дорогам на коне. Машинка идеальная и нам вышла очень недорого. Спасибо. Так держать уровень.</div>
+							</div>
+						</div>
+						<div class="slider-main__item">
+							<img src="images/review_tmp.jpg" alt="">
+							<div class="review">
+								<span class="review__name">Светлана и Дмитрий Новиковы,</span>
+								<span class="review__date">04.12.2015 в 13:30</span>
+								<div class="review__txt"><div>Мы остались очень довольны. Все в лучшем виде.</div>
 								Наша семейная не ставила цель найти себе дорогущую машина всего на викенд, который мы провели в Москве. Поэтому выбор пал на Ветер авто. Нам вполне на пару дней хотела 10-го Лансера, чтобы чувствовать себя по безразмерным московским дорогам на коне. Машинка идеальная и нам вышла очень недорого. Спасибо. Так держать уровень.</div>
 							</div>
 						</div>
@@ -374,7 +508,7 @@
 
 				</div>
 			</div>
-
+			<!-- BLOCK WITH SLIDER END-->
 
 		<!-- FOOTER -->
 		</div>
@@ -452,11 +586,11 @@
 				<div class="footer-panel">
 					<div class="footer-panel__item">
 						<div class="soc">
-							<a href="" class="soc__item">odnoklasniki</a>
-							<a href="" class="soc__item">facebook</a>
-							<a href="" class="soc__item">vkontacte</a>
-							<a href="" class="soc__item">instagram</a>
-							<a href="" class="soc__item">youtube</a>
+							<a href="" class="soc__item soc__item--ok">odnoklasniki</a>
+							<a href="" class="soc__item soc__item--fb">facebook</a>
+							<a href="" class="soc__item soc__item--vk">vkontacte</a>
+							<a href="" class="soc__item soc__item--in">instagram</a>
+							<a href="" class="soc__item soc__item--yt">youtube</a>
 						</div>
 					</div>
 					<div class="footer-panel__item">
@@ -476,7 +610,7 @@
 					<div class="footer-panel__item">
 						<div class="copyright">
 							<div class="copyright__item">© «Ветер-Авто» - аренда/прокат легковых автомобилей</div>
-							<div class="copyright__item"><a href="">Создание сайта и дизайн</a>, «Инфодизайн», 2008</div>
+							<div class="copyright__item"><a href="http://infodesign.ru/">Создание сайта и дизайн</a>, «Инфодизайн», 2008</div>
 						</div>
 					</div>
 				</div>

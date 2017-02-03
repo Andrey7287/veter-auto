@@ -1,6 +1,6 @@
 $duration: 0.5s;
 $menu-bkg-inner: #e9f6fa;
-$menu-hov: #01a3d4;
+$menu-hov: linear-gradient(to bottom, #ff9500 0%, #ff6b00 100%);
 $menu-height: 56;
 $menu-color-hov: #fff;
 $menu-color: #fff;
@@ -78,7 +78,7 @@ $menu-border-bottom-color: #0a4e8c;
 			display: table;
 			width: 100%;
 			height: #{$menu-height}px;
-			padding: 10px;
+			padding: 10px 20px;;
 			color: $menu-color;
 			span {
 				font-size: #{$menu-font-size}px;
@@ -92,9 +92,18 @@ $menu-border-bottom-color: #0a4e8c;
 		&:hover,
 		&--act {
 			a {
-				/*background: $menu-hov;
-				color: $menu-color-hov;*/
-				text-decoration: underline;
+				background: $menu-hov;
+				color: $menu-color-hov;
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 100%;
+					bottom:-3px;
+					left: 0;
+					right: 0;
+					border-bottom: 3px solid #cc6600;
+				}
 			}
 		}
 		.dropdown {
@@ -175,22 +184,4 @@ $menu-border-bottom-color: #0a4e8c;
 
 .site-nav {
 	@include nav;
-	&__item {
-		&:first-child {
-			.site-nav__link {
-				padding-left: 0;
-				span {
-					text-align: left;
-				}
-			}
-		}
-		&:last-child {
-			.site-nav__link {
-				padding-right: 0;
-				span {
-					text-align: right;
-				}
-			}
-		}
-	}
 }
