@@ -11,21 +11,24 @@ import './modules/datepicker-ru';
 import './modules/ravno';
 import '../sass/css.scss';
 import Menu from './modules/menu';
-import Footer from './modules/footer';
+//import Footer from './modules/footer';
 import OnResize from './modules/resize';
 import scrollup from './modules/scrollup';
-import 'script!picturefill/dist/picturefill.min';
+//import 'script!picturefill/dist/picturefill.min';
 
 
 /* Define project components and variables */
 var menu = new Menu(),
-		footer = new Footer(),
+//	footer = new Footer(),
 		resizeAdaptiveMenu = new OnResize(),
 		resizeAlignGreed = new OnResize(true),
 		isMap = $('#map').is('#map'),
 		isSlider = $('.slider').is('.slider'),
 		mobileView = window.matchMedia("(max-width: 992px)").matches,
-		scrollTiming = 0;
+		scrollTiming = 0,
+		isCalculator = $('.calculator').is('.calculator'),
+		isАccordion = $('.accordion').is('.accordion');
+
 
 /***********************
 ********* MENU *********
@@ -47,7 +50,12 @@ resizeAdaptiveMenu.bind(adaptiveMenu);
 ************************/
 
 $(window).on('load', function(){
-	footer.fixFooter();
+
+	setTimeout(function(){
+		var footerHeight = $('footer').outerHeight(true);
+		$('.content').css('min-height', 'calc(100vh - '+footerHeight+'px)');
+	},1);
+
 });
 
 /**********************
@@ -79,8 +87,19 @@ if ( isSlider ) {
 			slidesToShow: 2
 		});
 		$('.slider-card').slick({
-			arrows: false
+			arrows: false,
+			fade: true
 		});
+
+		$('.slider-nav').on('click', '.slider-nav__item', function(e){
+
+			e.preventDefault();
+
+			var index = $(this).parent().index();
+			$('.slider-card').slick('slickGoTo', index);
+
+		});
+
 	});
 
 }
@@ -126,3 +145,57 @@ $(".datepicker").datepicker({
 var $card = $('.catalog__descr');
 $card.find('h3').ravno();
 $card.find('.spec').ravno();
+
+
+/********************************
+******* Calculator slider *******
+*********************************/
+
+if( isCalculator) {
+
+	$('.toggle').click(function(e){
+
+		e.preventDefault();
+		var $thisCalculator = $(this).closest('.calculator'),
+				$otherCalculator = $thisCalculator.siblings(),
+				$thisForm = $thisCalculator.find('form'),
+				$otherForms = $otherCalculator.find('form'),
+				$otherToggles = $otherCalculator.find('.toggle');
+
+		$otherForms.slideUp(400);
+		$otherToggles.html('Показать');
+		$otherCalculator.removeClass('calculator--act');
+
+		$(this).html() === 'Показать' ? $(this).html('Скрыть') : $(this).html('Показать');
+		$thisForm.slideToggle(400, function(){
+
+			$('html, body').animate({
+				scrollTop: $thisCalculator.offset().top
+			}, 400);
+
+			$thisCalculator.toggleClass('calculator--act');
+
+		});
+
+		console.log($(this).html())
+	});
+
+}
+
+/********************************
+********* Accordion FAQ *********
+*********************************/
+
+if( isАccordion ) {
+
+	$('.accordion').on('click', '.title', function(e){
+
+		e.preventDefault();
+
+		var $otherBlocks = $(this).siblings('.block');
+		$otherBlocks.slideUp();
+		$(this).next().slideToggle();
+
+	});
+
+}

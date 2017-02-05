@@ -10,8 +10,18 @@
 	overflow: hidden;
 }
 
+html,
+body,
+.content{
+ height: 100%;
+}
+.content {
+	//min-height: calc(100vh - 516px);
+}
 body {
 	font-size: #{$base-font-size}px;
+	line-height: #{$base-line-height}px;
+	font-family: $default-font;
 	color: $default-color;
 	overflow-x: hidden;
 }
@@ -109,7 +119,7 @@ body {
 	h1, .h1 {
 		@include font(40, 42, 700);
 		color: $header;
-		margin: 18px 0;
+		margin: 25px 0;
 	}
 	h2, .h2 {
 		@include font(32, 34, 700);
@@ -119,7 +129,12 @@ body {
 	h3, .h3 {
 		@include font(26, 28, 700);
 		color: $blue;
-		margin: 10px 0;
+		margin: 12px 0;
+	}
+	h4, .h4 {
+		@include font(22, 24, 700);
+		color: $header;
+		margin: 12px 0;
 	}
 }
 
@@ -182,4 +197,7 @@ body {
 		border-radius: 50%;
 		margin-right: 5px;
 	}
+}
+body small {
+	font-size: 0.86em;
 }

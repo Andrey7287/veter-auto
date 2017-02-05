@@ -54,6 +54,7 @@ export default class {
 			this.accordion( $(this.menu), this.duration );
 			$button.toggleClass('is-active');
 
+
 		});
 
 	}

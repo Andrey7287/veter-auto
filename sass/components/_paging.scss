@@ -1,0 +1,28 @@
+.paging {
+	border: 2px solid $orange;
+	border-radius: 30px;
+	display: inline-block;
+	@include clearfix;
+	&__item {
+		display: inline-block;
+		float: left;
+		padding: 15px;
+		border-left: 2px solid $orange;
+		@include font(13,16,700);
+		&:first-child {
+			border-left: 0;
+			border-top-left-radius:  30px;
+			border-bottom-left-radius:  30px;
+		}
+		&:last-child {
+			border-top-right-radius:  30px;
+			border-bottom-right-radius:  30px;
+		}
+		&:hover,
+		&--act{
+			text-decoration: none;
+			background: $orange;
+			color: #fff;
+		}
+	}
+}

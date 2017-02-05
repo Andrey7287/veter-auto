@@ -1,6 +1,8 @@
 .footer {
 	background: $bkg-footer;
 	padding: 55px 0 17px;
+	position: relative;
+	margin-top: 40px;
 }
 
 .footer-nav {
@@ -111,6 +113,7 @@
 			padding: 4px 20px 4px 10px;
 			width: 185px;
 			color: #3d4646;
+			border: 1px solid #d4d4d4;
 		}
 		label {
 			text-indent: -9999px;

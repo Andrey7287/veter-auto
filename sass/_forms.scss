@@ -1,3 +1,68 @@
+select,
+label,
+input {
+	color: #3d4646;
+	cursor: pointer;
+	&:hover {
+		color: #000;
+	}
+	&[type="checkbox"] {
+		display: none;
+		&+label {
+			display: block;
+			padding-left: 25px;
+			position: relative;
+			margin: 10px 0;
+			@include font(14);
+			&::after {
+				content: "";
+				position: absolute;
+				top:3px;
+				left:0;
+				@include sprite($chkbox);
+			}
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+		&:checked {
+			&+label::after {
+				@include sprite($chkbox_act);
+			}
+		}
+	}
+}
+
+.select,
+.date {
+	position: relative;
+	&::after {
+		content: "";
+		@include sprite($icon_select);
+		position: absolute;
+		top: calc(50% - 4px);
+		right: 7px;
+	}
+	input,
+	select {
+		width: 100%;
+		border: 1px solid #d4d4d4;
+		option {
+			cursor: pointer;
+			&:hover {
+				background-color: $orange;
+			}
+		}
+	}
+}
+
+.date {
+	&::after {
+		@include sprite($icon_date);
+		top: calc(50% - 10.5px);
+	}
+}
+
 .search-auto {
 	background: #fff;
 	border-radius: 5px;
@@ -20,6 +85,9 @@
 			padding: 0 20px;
 			border-left: 1px solid #dcdcdc;
 		}
+		&:last-child {
+			text-align: right;
+		}
 	}
 
 	&__label {
@@ -38,24 +106,19 @@
 		}
 	}
 
-	&__select,
-	&__date {
-		position: relative;
+	.select,
+	.date {
+
 		&::after {
-			content: "";
-			@include sprite($icon_select);
-			position: absolute;
-			top: calc(50% - 4px);
 			right: 2px;
 		}
 		select {
-			width: 100%;
 			border: 0;
 			padding: 21.5px 17px;
 		}
 	}
 
-	&__date {
+	.date {
 		&::after {
 			@include sprite($icon_date);
 			top: calc(50% - 10.5px);
@@ -71,18 +134,13 @@
 	select,
 	label,
 	input {
-		color: #3d4646;
-		cursor: pointer;
 		@include font(17, 20);
-		&:hover {
-			color: #000;
-		}
 	}
 
 	&__button {
 		border-top-left-radius: 0!important;
 		border-bottom-left-radius: 0!important;
-		padding: 21.5px 0!important;
+		padding: 22px 0!important;
 		width: 170px!important;
 		&:before {
 			border-top-left-radius: 0!important;
