@@ -1,0 +1,44 @@
+.soc {
+
+	&__item {
+		font-size: 0;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			transition: 0.3s ease-out;
+		}
+
+		&--ok {
+			&::before {
+				@include sprite($soc_ok);
+			}
+		}
+		&--fb {
+			&::before {
+				@include sprite($soc_fb);
+			}
+		}
+		&--vk {
+			&::before {
+				@include sprite($soc_vk);
+			}
+		}
+		&--in {
+			&::before {
+				@include sprite($soc_in);
+			}
+		}
+		&--yt {
+			&::before {
+				@include sprite($soc_yt);
+			}
+		}
+		&:hover {
+			&::before {
+				border-radius: 50%;
+			}
+		}
+	}
+
+}

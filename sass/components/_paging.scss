@@ -6,7 +6,7 @@
 	&__item {
 		display: inline-block;
 		float: left;
-		padding: 15px;
+		padding: 10px 13px;
 		border-left: 2px solid $orange;
 		@include font(13,16,700);
 		&:first-child {

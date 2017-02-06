@@ -22,7 +22,7 @@ $c-humburger-color: #01a3d4;
 
 .c-hamburger {
 	display: none;
-	@include breakpoint (mobile) {
+	@include breakpoint (tablet) {
 		display: block;
 	}
 	position: relative;

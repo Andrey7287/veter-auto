@@ -79,21 +79,3 @@
 	}
 
 }
-
-.review {
-	color: $grey;
-	&__name {
-		@include font(18,24,700);
-		color: #000;
-	}
-	&__date {
-		@include font(14,24);
-	}
-	&__txt {
-		@include font(14,24);
-		div {
-			font-weight: 700;
-			margin-top: 10px;
-		}
-	}
-}

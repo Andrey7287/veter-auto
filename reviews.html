@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>title</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700" rel="stylesheet" />
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<!--<link rel="stylesheet" href="main.css" />-->
 </head>
 
@@ -72,83 +71,134 @@
 
 			</header>
 			<!-- HEADER end-->
-			<div id="map" class="map"></div>
 			<div class="container">
-				<div class="row contacts">
-					<div class="col-sm-8">
-						<h1>Контактная информация<span>Компания «Ветер-Авто»</span></h1>
-						<div class="contact-table">
-							<table>
-								<tbody>
-									<tr>
-										<td>
-											<div class="title icon icon--loc">Адрес:</div>
-											<span>Офис: Москва, Матросская Тишина, 23 с. 1</span>
-										</td>
-										<td>
-											<div class="title icon icon--mob">Телефоны:</div>
-											<div>Отдел продаж: <a href="tel:84955062604">8 (495) 506-26-04</a></div>
-											<div>Мобильный: <a href="tel:89265392517">8 (926) 539-25-17</a></div>
-											<span class="icon icon--whatsapp">WhatsApp: <a href="tel:89255062604">8 (925) 506-26-04</a></span>
-											<span class="icon icon--wiber">Wiber: <a href="tel:89255062604">89255062604</a></span>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="title icon icon--loc">Как к нам проехать</div>
-											<span class="metro">Станция метро Сокольники. Маршрутка 237, 239,
-											404 (номера условные)</span>
-										</td>
-										<td><div class="title icon icon--mail">E-mail:</div>
-										<a href="mailto:nfo@veterauto.ru">nfo@veterauto.ru</a></td>
-									</tr>
-									<tr>
-										<td><div class="title icon icon--gps">GPS координаты</div>
-										<span>Здесь вставить соответстсвующие кординаты</span></td>
-										<td>
-											<div class="title icon icon--time">Режим работы</div>
-											<span>Мы работаем без выходных, с 10:00 до 20:00</span>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="soc">
-												<a href="" class="soc__item soc__item--yt">youtube</a>
-												<a href="" class="soc__item soc__item--in">instagram</a>
-												<a href="" class="soc__item soc__item--vk">vkontacte</a>
-												<a href="" class="soc__item soc__item--fb">facebook</a>
-												<a href="" class="soc__item soc__item--ok">odnoklasniki</a>
-											</div>
-										</td>
-										<td>
-											<a href="" class="icon icon--print">Версия для печати</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="form">
-							<form action="">
-								<div class="form__title">Обратная связь</div>
-								<div class="form__item">
-									<input type="text" placeholder="Ваше имя" />
-								</div>
-								<div class="form__item">
-									<input type="email" placeholder="E-mail или телефон" />
-								</div>
-								<div class="form__item">
-									<textarea name="" id="" placeholder="Сообщение"></textarea>
-								</div>
-								<a href="" class="btn">Отправить</a>
-							</form>
-						</div>
-					</div>
+				<!-- На всех внутренних кроме контактов -->
+				<!-- HEADER inner end-->
+
+				<!--breadcrumbs-->
+				<div class="breadcrumbs">
+					<a class="breadcrumbs__item" href="#">Главная</a>
+					<span class="breadcrumbs__item">Отзывы</span>
 				</div>
 
+				<div class="reviews-page">
+					<ul class="vendor-list">
+						<li>
+							<a href=""><img src="images/vendors_nissan.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_ford.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_hendai.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_mitsubishi.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_shevorolet.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_shkoda.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_renault.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_infiniti.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_toyota.png" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="images/vendors_kia.png" alt=""></a>
+						</li>
+					</ul>
 
 
+					<h1>Отзывы <span>(134)</span></h1>
+
+					<div class="head">
+						<div class="head__item">
+							<!-- PAGING START -->
+							<div class="paging">
+								<a href="" class="paging__item">Предыдущая</a>
+								<a href="" class="paging__item paging__item--act">1</a>
+								<a href="" class="paging__item">2</a>
+								<a href="" class="paging__item">3</a>
+								<a href="" class="paging__item">4</a>
+								<a href="" class="paging__item">5</a>
+								<a href="" class="paging__item">Следующая</a>
+							</div>
+							<!-- PAGING END -->
+						</div>
+						<div class="head__item">
+							<a href="#" class="btn">Оставить отзыв</a>
+						</div>
+					</div>
+
+					<!-- REVIEWS START-->
+					<div class="review">
+
+						<div class="review__item">
+							<div class="header">
+								<div class="header__item">
+									<span class="review__name">Евгений Викторович Иванов </span>
+									<span class="review__date">03. 22.10.17</span>
+								</div>
+								<div class="header__item header__item--img">
+									<img src="images/feedback_good.png" alt="" class="review__icon">
+								</div>
+							</div>
+							<p>Я приехал на пару дней в москву мне нужен был автомобиль воспользовался услугами вашей компании взял в аренду выбор пал на Lancer мне понравилось . все супер спасибо</p>
+						</div>
+
+						<div class="review__item">
+							<div class="header">
+								<div class="header__item">
+									<span class="review__name">Светлана и Дмитрий Новиковы</span>
+									<span class="review__date">03. 22.10.17</span>
+								</div>
+								<div class="header__item header__item--img">
+									<img src="images/feedback_bad.png" alt="" class="review__icon">
+								</div>
+							</div>
+							<p>Мы остались очень довольны. Все в лучшем виде. Наша семейная не ставила цель найти себе дорогущую машина всего на викенд, который мы провели в Москве. Поэтому выбор пал на Ветер авто. Нам вполне на пару дней хотела 10-го Лансера, чтобы чувствовать себя по безразмерным московским дорогам на коне. Машинка идеальная и нам вышла очень недорого. Спасибо. Так держать уровень.</p>
+						</div>
+
+						<div class="review__item">
+							<div class="header">
+								<div class="header__item">
+									<span class="review__name">Эдуард Трутин</span>
+									<span class="review__date">03. 22.10.17</span>
+								</div>
+								<div class="header__item header__item--img">
+									<img src="images/feedback_good.png" alt="" class="review__icon">
+								</div>
+							</div>
+							<p>Я приехал в Москву из Воронежа, чтобы провести несколько дней, посетив красивые места нашей столицы. При поиске недорогой аренды авто в Москве наткнулся в интернете на сайт компании ВетерАвто и заказал на конкретную дату простую машину Ниссан Альмеру, сэкономив на этом достаточно хорошо. Машиной доволен - все чисто, салон, внешний вид, рабочее состояние идеальное (проверено даже вечерними пробками). Благодарю Елену за внимательность и отзывчивость, помощь в навигации по Москве. Спасибо. ВЫ хорошая компания.</p>
+						</div>
+
+					</div>
+
+
+					<div class="footer">
+						<!-- PAGING START -->
+						<div class="paging">
+							<a href="" class="paging__item">Предыдущая</a>
+							<a href="" class="paging__item paging__item--act">1</a>
+							<a href="" class="paging__item">2</a>
+							<a href="" class="paging__item">3</a>
+							<a href="" class="paging__item">4</a>
+							<a href="" class="paging__item">5</a>
+							<a href="" class="paging__item">Следующая</a>
+						</div>
+						<!-- PAGING END -->
+					</div>
+				</div>
+				<!-- REVIEWS END-->
+
+				<!-- FOOTER inner-->
 			</div>
 			<!-- FOOTER -->
 		</div>

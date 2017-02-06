@@ -1,8 +1,8 @@
-.footer {
+.body>.footer {
 	background: $bkg-footer;
 	padding: 55px 0 17px;
 	position: relative;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .footer-nav {
@@ -29,80 +29,18 @@
 			color: #000;
 		}
 	}
-	.icon--print {
-		display: block;
-		color: $orange;
-		line-height: 17px;
-		padding-left: 30px;
-		position: relative;
-		margin: 17px 0;
-		font-weight: 700;
-		&::before {
-			content: "";
-			display: block;
-			position: absolute;
-			top: calc(50% - 9px);
-			left: 0;
-			@include sprite($icon_forprint);
-		}
-		&:hover {
-			color: darken($orange, 7%);
-		}
-	}
 }
 .footer-panel {
 	padding: 17px 0;
 	border-top: #e0e0e0;
+	margin-top: 17px;
+	border-top: 1px solid #e0e0e0;
+	@include clearfix;
 	&__item {
 		float:right;
 		&:last-child {
 			float: left;
 		}
-	}
-
-	.soc {
-
-		&__item {
-			font-size: 0;
-
-			&::before {
-				content: "";
-				display: inline-block;
-				transition: 0.3s ease-out;
-			}
-
-			&--ok {
-				&::before {
-					@include sprite($soc_ok);
-				}
-			}
-			&--fb {
-				&::before {
-					@include sprite($soc_fb);
-				}
-			}
-			&--vk {
-				&::before {
-					@include sprite($soc_vk);
-				}
-			}
-			&--in {
-				&::before {
-					@include sprite($soc_in);
-				}
-			}
-			&--yt {
-				&::before {
-					@include sprite($soc_yt);
-				}
-			}
-			&:hover {
-				&::before {
-					border-radius: 50%;
-				}
-			}
-		}
-
 	}
 
 	.search {

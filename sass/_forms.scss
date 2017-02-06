@@ -153,4 +153,23 @@ input {
 	}
 }
 
-
+.form {
+	padding: 20px;
+	&__title {
+		@include font(22,28);
+		color: $orange;
+		margin-bottom: 20px;
+	}
+	&__item {
+		margin-bottom: 15px;
+		input,
+		textarea {
+			width: 100%;
+			padding: 7px;
+			cursor: auto;
+		}
+		textarea {
+			height: 178px;
+		}
+	}
+}

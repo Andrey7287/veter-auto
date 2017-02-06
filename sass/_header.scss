@@ -5,14 +5,38 @@ position: relative;
 .site-top {
 	display: table;
 	width: 100%;
+	@include breakpoint(tablet){
+		display: block;
+		position: relative;
+		@include clearfix;
+		margin-top: 15px;
+	}
 	&__item {
 		display: table-cell;
 		vertical-align: middle;
+		@include breakpoint(tablet){
+			display: block;
+		}
+		&:first-child {
+			@include breakpoint(tablet) {
+				float: left;
+			}
+		}
 		&:nth-child(even){
 			padding-left: 10%;
+			@include breakpoint(medium) {
+				padding-left: 0
+			}
+			@include breakpoint(tablet) {
+				float: right;
+				width: calc(100% - 200px);
+			}
 		}
 		&:last-child{
 			text-align: right;
+			position: absolute;
+			right:0;
+			bottom:-30px;
 		}
 	}
 	.contacts {
@@ -54,6 +78,9 @@ position: relative;
 		.phone {
 			@include font (18,18,700);
 			@include clearfix;
+			@include breakpoint(medium) {
+				font-size: 0.95em;
+			}
 			&__item {
 				color: #3d4646;
 				&:first-child {
@@ -65,6 +92,11 @@ position: relative;
 			}
 		}
 	}
+	.call-back {
+		@include breakpoint(tablet) {
+			padding: 5.5px 12px;
+		}
+	}
 }
 
 #siteMenu {
@@ -73,5 +105,21 @@ position: relative;
 	box-shadow: 0 5px 10px -5px rgba(0,0,0,.75);
 	.site-menu-inner {
 		margin: 0 -30px;
+		@include breakpoint(medium) {
+			margin: 0 -10px;
+		}
+		@include breakpoint(mobile) {
+			margin: 0;
+		}
+	}
+	.container {
+		@include breakpoint(tablet){
+			width: auto;
+		}
+	}
+	.c-hamburger {
+		@include breakpoint(tablet){
+			margin-left: 15px;
+		}
 	}
 }

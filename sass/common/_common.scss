@@ -160,6 +160,10 @@ body {
 		background: #fff;
 		color: $orange;
 	}
+	&:focus {
+		color: $orange;
+		text-decoration: none;
+	}
 }
 
 .inner {

@@ -1,0 +1,39 @@
+.contacts {
+	h1 {
+		margin-top: -3px;
+		span {
+			display: block;
+			font-size: .45em;
+			line-height: 1em;
+			color: #6f6f6f;
+			margin: 33px 0 43px;
+		}
+	}
+	.form {
+		border: 1px solid #dfdfdf;
+		border-radius: 5px;
+		background: #f1f1f1;
+		.btn {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+.contact-table {
+	@include font(14,30);
+	table {
+		.title {
+			@include font(18,30,700);
+		}
+		td {
+			width: 50%;
+			vertical-align: top;
+			padding: 0 80px 40px 0;
+		}
+		.icon {
+			&::before {
+				top: 3px;
+			}
+		}
+	}
+}

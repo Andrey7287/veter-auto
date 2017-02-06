@@ -38,9 +38,6 @@ $menu-border-bottom-color: #0a4e8c;
 	display: table;
 	width: 100%;
 	@include breakpoint(tablet) {
-		position: relative;
-	}
-	@include breakpoint(mobile) {
 		transform: translateX(-100%) scaleY(0);
 		opacity: 0;
 		@at-root .mobile-open {
@@ -60,6 +57,7 @@ $menu-border-bottom-color: #0a4e8c;
 	}
 
 	&__item {
+		position: relative;
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
@@ -67,10 +65,7 @@ $menu-border-bottom-color: #0a4e8c;
 		@if $menu-border-bottom-size > 0 {
 			border-bottom: #{$menu-border-bottom-size}px solid #{$menu-border-bottom-color};
 		}
-		@include breakpoint(tablet) {
-			position: relative;
-		}
-		@include breakpoint(mobile){
+		@include breakpoint(tablet){
 			display: list-item;
 		}
 		a {
@@ -80,6 +75,9 @@ $menu-border-bottom-color: #0a4e8c;
 			height: #{$menu-height}px;
 			padding: 10px 20px;;
 			color: $menu-color;
+			@include breakpoint(tablet) {
+				height: auto;
+			}
 			span {
 				font-size: #{$menu-font-size}px;
 				font-weight: 700;
@@ -141,7 +139,7 @@ $menu-border-bottom-color: #0a4e8c;
 						display: table-cell;
 						vertical-align: middle;
 						text-align: left;
-						@include breakpoint(mobile) {
+						@include breakpoint(tablet) {
 							text-align: center;
 						}
 					}
@@ -165,7 +163,7 @@ $menu-border-bottom-color: #0a4e8c;
 			}
 		}
 
-		@include breakpoint (mobile) {
+		@include breakpoint (tablet) {
 			.dropdown{
 				&.show {
 					transform: translateY(0%) scaleY(1);
@@ -184,4 +182,17 @@ $menu-border-bottom-color: #0a4e8c;
 
 .site-nav {
 	@include nav;
+	&__item {
+		a {
+			@include breakpoint(medium) {
+				padding: 10px;
+			}
+			span {
+				@include breakpoint(medium) {
+					font-size: 12px;
+				}
+			}
+		}
+
+	}
 }

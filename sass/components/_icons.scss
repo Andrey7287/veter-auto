@@ -1,0 +1,62 @@
+.body	{
+	.icon {
+		display: block;
+		position: relative;
+		padding-left: 30px;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+		}
+		&--print {
+			color: $orange;
+			line-height: 17px;
+			margin: 9.5px 0;
+			font-weight: 700;
+			&::before {
+				top: calc(50% - 9px);
+				@include sprite($icon_forprint);
+			}
+			&:hover {
+				color: darken($orange, 7%);
+			}
+		}
+		&--loc {
+			&::before {
+				@include sprite($icon_location);
+			}
+		}
+		&--mob {
+			&::before {
+				@include sprite($icon_mob);
+			}
+		}
+		&--mail {
+			&::before {
+				@include sprite($icon_mail);
+			}
+		}
+		&--gps {
+			&::before {
+				@include sprite($icon_gps);
+			}
+		}
+		&--whatsapp {
+			&::before {
+				@include sprite($icon_whatsapp);
+			}
+		}
+		&--wiber {
+			&::before {
+				@include sprite($icon_wiber);
+			}
+		}
+		&--time {
+			&::before {
+				@include sprite($icon_time);
+			}
+		}
+	}
+}
+
